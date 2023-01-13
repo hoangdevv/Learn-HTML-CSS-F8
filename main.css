@@ -1,0 +1,188 @@
+h1{  /* External css */ 
+    color: yellowgreen;
+    font-size: 50px;
+    margin-top: 150px;
+}
+h2::selection{
+  background-color: bisque;
+}
+
+/* THUỘC TÍNH PADDING(ĐỆM), BORDER(ĐƯỜNG VIỀN), MARGIN(KHOẢNG CÁCH LỀ XA), "BOX-SIZING: border-box" ĐÃ TÍNH TOÁN LÀM S CHO ĐÚNG KÍCH THƯỚC BAN ĐẦU(ĐÃ DÙNG PADDING HAY BORDER) */
+
+.boxx{
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* float: left;  : hình sẽ theo dòng  */
+}
+.boxx1{
+  background-color: black;
+  margin: 10px 20px 30px 50px;
+}
+.boxx2{
+  background-color: blueviolet;
+  margin-left: 20px;
+}
+.boxx3{ 
+  background-color: rgb(42, 167, 53);
+  padding: 20px ;
+  border-width: 10px;
+  border-style: solid ; /* solid: nét liền or dashed: nét đứt*/
+  border-color: aqua;
+  margin: 20px;
+  box-sizing: border-box; /* làm cho box đúng về thực trạng 60*60 khi có cả 'pad' hay 'border'*/
+  /* viết tắt: border: 10px style #fff */
+}
+
+/* Position: tao ra những vị trí hiển thị cho những element website của bạn*/
+.box{
+  /* position: relative; */
+  position: fixed;
+  top: 0;
+  /* bottom: 0; */
+  display: flex;
+}
+.box2{
+  width: 60px;
+  height: 60px;
+  background-color: yellow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+ul{
+  height: 2000px;
+}
+
+/* CĂN GIỮA TRONG CSS */
+h3{
+  
+  margin: auto;
+  position: relative;
+}
+
+/*KẺ KHUNG BÊN CẠNH NHƯ WEB SHOPPE  */
+h3::after{
+  position: absolute;
+  content: "";
+  border-left: 3px solid #333;
+  height: 15px;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Bỏ gạch chân mặc định của thẻ a 
+  text-decoration: none; 
+
+   CSS IN HTML
+1. Internal : (bên kia) (sử dụng 1 cặp thẻ style và viết css trong cặp thẻ style đó)
+2. External : sử dụng file bên khác r gán link vào
+3. Inline : sử dụng Attribute style trong thẻ mở
+*/
+
+ /* 
+    CSS selectors:
+        ID <#> & CLASS <.>  
+*/
+
+  /* Điểm ưu tiên 
+    !important
+    1. inline : 1000
+    2. #id : 100
+    3. .class : 10
+    4. tag : 1
+    5. internal, external
+    6. equal specificity
+    7. universal selector and inherited ? 
+  */
+
+  /* 
+    Sử dụng 'biến' thay màu trong css:
+    :root {
+        --tenbien: màu;
+    }
+
+    h1{
+        color: var(--tenbien);
+    }
+  */
+
+  /*  MEDIA QUERY
+  * Absolute units (đơn vị tuyệt đối)
+    1. px
+    2. pt
+    3. cm
+    4. mm
+    5. inch
+  * Relative units (đơn vị tương đối)
+    1.  % :phụ thuộc vào thẻ chứa nó và = 1/2 kích thức của thẻ 
+    2. rem (thường dùng): phụ thuộc vào thẻ html 
+    3. em
+    4. vw (ngang):bằng % kích thước của trình duyệt
+    5. vh (dọc):bằng % kích thước của trình duyệt
+    ===mặc định 100% = 16px
+  */
+
+  /*CSS funtions(hàm)
+    var()
+    linear-gradient() 
+    rgba()
+    rgb()
+    calc()
+    attr() vd: [class]::after {
+                    content: " ("  attr(class) ")";
+                }
+  */
+
+  /*CSS Elements giả 
+  1: ::before(không thể thiếu : 'content' và muốn có tính chất khối giông thẻ div phải thêm 'display: block')
+  2: ::after(không thể thiếu : 'content' và muốn có tính chất khối giông thẻ div phải thêm 'display: block')
+  3: ::first-letter: kí tự đầu tiên muốn css
+  4: ::first-line: dòng đầu tiên muốn css
+  5: ::selection : thay màu của bôi chuột(vd o tren)
+   */
+
+   /* Position: tao ra những vị trí hiển thị cho những element website của bạn
+   + relative : vị trí tương đối: (không bị phụ thuộc nào khác, tự do di chuyển của nó)
+   + absolute : vị trí tuyệt đối: (bị phụ thuộc bởi thằng cha gần nhất có thuộc tính position để lấy thg cha đó làm góc tọa độ) --->(phụ thuộc vào 1 đội tượng khác như giao diện thì sẽ sd)
+   + fixed: vị trí phụ thuộc vào khung trình duyệt :(khi kéo chuột lên xuống thì phần hiển thị header, thông báo đều không bị thay đổi)---> (phụ thuộc vào cửa sổ trình duyệt thì sẽ sd)
+   + sticky 
+   */
+
+
+   /* CSS FLEXBOX
+   - display:           flex  | inline flex
+   - flex-direction:    row   | column
+   - flex-wrap:         nowrap| wrap        |  
+   - flex-basis:        <length>
+   - justify-content:   flex-start  | flex-end  | center  | space-between | space-around  | space-evenly  
+   - justify-self:      flex-start  | flex-end  | center
+   - align-content:     flex-start  | flex-end  | center
+   - align-self:        flex-start  | flex-end  | center
+   - flex-grow:         <number>
+   - flex-shrink:       <number>
+   - flex:              <flex-grow>   | <flex-shrink> | <flex-basis>
+   - flex-flow:         <flex-direction>  | <flex-wrap>
+   - order:             <number>
+
+   GIẢI THÍCH: 
+   ==display: flex --> cùng 1 hàng  
+   ==flex-wrap: nowrap--> không xuống dòng <> wrap--> xuống dòng <> wrap-reverse: lên dòng(ngược lại cho start nằm ở dưới) 
+   ==justify-content: flex-start--> các items sẽ về bên start là bên trái.,,,,flex-end thì ngược lại
+   ==justify-content: space-between--> các items của 1 container sẽ tách ra 2 bên, phía bên start,phía bên end
+   ==justify-content: space-around--> các items sẽ tách ở giữa lớn hơn phần tách ở 2 phía bên ngoài cùng
+   ==justify-content: space-evenly--> các items sẽ tách đều các bên
+   ==
+   ==flex: 1
+   
+   ==flew-grow: 1
+   ==flex-shrink: 1
+   ==flex-basis: 1
+   ==
+   ==
+
+  */

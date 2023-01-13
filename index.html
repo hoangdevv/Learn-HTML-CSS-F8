@@ -1,0 +1,125 @@
+ <!-- khai báo -->
+ <!DOCTYPE html> 
+<html><!--Thẻ mở--> 
+
+    <head>  <!--Phần đầu-->
+        <title>F8 - SHOP</title>
+        <meta charset="utf-8">     <!-- thẻ meta -->
+        <link rel="stylesheet" href="main.css">  <!--Liên kết vs main.css-->
+        <style>  /*Đang làm css trong phần Internal */
+            img{
+                height: 300px;
+            }
+
+            h2{ 
+                color: rebeccapurple;
+                font-size: 30px;
+            }
+            *{
+                margin: 0;
+            }
+            .box{
+                width: 100%;
+                height: 120px;
+                background-color: rgb(54, 218, 150);
+            }
+            /* attr */
+            a::after{
+                content: "("attr(href)")";
+            }
+            .box::after{
+                content: attr(data-title);
+            }
+            /*LỚP GIẢ :hover: đổi màu khi di chuyển chuột vào  */
+            .box:hover{
+                background-color: red;
+            }
+            /*LỚP GIẢ  :active : đổi màu khi click or giữ chuột vào */
+            h1:active{
+                color: aqua;
+            }
+            /*LỚP GIẢ :first-child : đổi màu ở trên cùng */
+            li:first-child{
+                color : wheat;
+            }
+            /*LỚP GIẢ :last-child : đổi màu ở dưới cùng */
+            li:last-child{
+                color : tomato;
+            }
+         </style>
+    </head>
+
+    <!--Ctrl + / : comment-->
+    <body>    <!--Phần thân-->
+        <div class="box" data-title="đây là box màu xanh luc">
+            <h3>CENTER ME</h3>
+            <div class="box2"></div>
+        </div>
+        <div>
+            <h1 title="cái j đây">  TRANG WEB CỦA TÔI  </h1>
+            <h2> Tiểu sử </h2>
+            <p style="color: rgb(44, 44, 201);"> Tôi tên Ngô Văn Huy Hoàng, năm sinh 2003, hiện tại đang sinh sống và làm việc ở Thành Phố Hồ Chí Minh.</p>
+            <img src="https://f8-zpcloud.zdn.vn/563415271999792043/2697c2d36879af27f668.jpg" alt="ảnh của tôi">
+            <p></p>
+            <a href="https://www.facebook.com/nvhhoang.hubert">My Facebook</a>
+            <p>--</p>
+            <a href="https://www.youtube.com/channel/UCD1snRTkkWA7bM1dio84Rtw">My Youtube</a>
+            <ul><p>co ban</p>
+                <li>Tôi đang học trường gì?</li>
+                <li>Ngành tôi đang học</li>
+            </ul>
+            <table>
+                <thead> <!--Phần đầu-->    
+                    <th>Mã số</th> <!--Tiêu đề !--> 
+                    <th>Loại</th>
+                    <th>Ngôn ngữ</th>
+                </thead>
+
+                <tbody> <!--Phần thân-->  
+                    <tr> <!--Phần dòng--> 
+                        <td>1</td>
+                        <td>tốt</td> <!--tương ứng vs những thẻ <th>--> 
+                        <td>C</td>
+                    </tr> 
+                    <tr> <!--Phần dòng--> 
+                        <td>2</td>
+                        <td>tốt</td> <!--tương ứng vs những thẻ <th>--> 
+                        <td>C++</td>
+                    </tr> 
+                </tbody>
+            </table>
+            <input type="">
+            <p>--</p>
+            <button>Đăng ký</button>
+        </div>
+        <div><p>------------------------------------------------------------------------------------------------------------------</p></div>
+        <div>
+            <ul>
+                <li>:root</li>
+                <li>:active</li>
+                <li>:first-child</li>
+                <li>:last-child</li>
+            </ul>
+        </div>
+        <div><p>------------------------------------------------------------------------------------------------------------------</p></div>
+        <div class="boxx boxx1">BOX1</div>
+        <div class="boxx boxx2">BOX2</div>
+        <div class="boxx boxx3">BOX3</div>
+        <div></div>
+         
+    </body> 
+</html><!--Thẻ đóng-->
+
+<!-- <br/>: xuống dòng -->
+<!-- THẺ PHẢI LÀM QUEN
+    1. h1 - h6 : heading(tiêu đề - h1: form lớn nhất)
+    2. p : paragraph(đoạn văn)
+    3. img : image(hình) --- src: nguồn file ảnh---alt: ko nhất thiết chèn
+    4. a : neo cái liên kết
+    5. ul,li : hiển thị các danh sách --- ul: unordered list --- li: list item
+    6. table (bảng) : có phần đầu và phân thân
+    7. input : thực hành nhiều sẽ quen 
+    8. button : nút 
+    9. div : khối bao quanh 
+ -->
+ <!-- Attribute: thuộc tính -->

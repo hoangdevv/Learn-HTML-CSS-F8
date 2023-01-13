@@ -1,0 +1,41 @@
+<!-- khai báo -->
+<!DOCTYPE html>
+<!-- thẻ mở -->
+<html>
+    <!-- phần đầu -->
+    <head>
+        <title>BACKGROUND</title>
+        <!-- thẻ mata tv -->
+        <meta charset="utf-8">
+
+        <!-- làm css ở đây lun -->
+        <style>
+            .oklla{
+                width: 100%;
+                height: 100vh; /*'vh' cần nhớ*/
+                background-image: linear-gradient(90deg/*deg: độ*/ /* nếu gọi 0 độ thì màu đâu tiên gọi sẽ nằm ở dưới, 90 độ thì nó nằm ở bên trái */,rgba(200,200,0.5,0.5)/* dùng rbga để xuyên cả màu và hình gán; từ 0.5->0: mới nhìn xuyên đc hình*/,rgba(100,100,0.5,0.5)), 
+                url(https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-71.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;  /* gọi để không lặp hình  */
+
+                /* background-origin: border-box;  khi có đường viền nét đứt mà muốn hình đan vào nhưng chỗ đứt thì dùng "background-origin" */
+
+                background-position: top right;
+                /* background-position: vị trí hình; cách thức code: dùng top,right,left,bottom và cái sau mặc định là center nếu không ghi */
+
+                /* CÁCH VIẾT NHANH CỦA BACKGROUND GỒM CÁC THUỘC TÍNH: URL  REPEAT(độ lặp)  POSITION / SIZE 
+                    background: url(https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-71.jpg) no-repeat center / contain;
+                */
+            }
+        </style>
+    </head>
+    <!-- phần thân -->
+    <body>
+        <div class="oklla"></div>        
+    </body>
+<!-- thẻ đóng -->
+</html>
+
+<!-- background-size: contain: tự thực hành để bik
+                      cover :  tự thực hành để bik                
+--> 
